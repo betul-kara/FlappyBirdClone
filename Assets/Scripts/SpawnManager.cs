@@ -5,11 +5,9 @@ using UnityEngine;
 public class SpawnManager : MonoBehaviour
 {
     [SerializeField] GameObject tilesMove;
-    public GameObject tilePrefab;
-    public float spawnRate = 2f; 
-    public float tileHeight = 2f; 
-
-    private float nextSpawnTime = 0f;
+    [SerializeField] GameObject tilePrefab;
+    [SerializeField] float spawnRate = 2f; 
+    float nextSpawnTime = 0f;
 
     void Update()
     {

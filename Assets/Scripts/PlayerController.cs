@@ -1,5 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
@@ -9,6 +11,10 @@ public class PlayerController : MonoBehaviour
     Rigidbody2D rigidbody2d;
     SpriteRenderer spriteRenderer;
     public static bool isGameOver;
+    public static bool isScoreTriggered;
+
+    [SerializeField] TextMeshProUGUI scoreText;
+    int score = 0;
 
     private void Start()
     {
@@ -37,6 +43,15 @@ public class PlayerController : MonoBehaviour
         {
             isGameOver = true;
             spriteRenderer.color = Color.red;
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collider)
+    {
+        if (collider.gameObject.CompareTag("Score"))
+        {
+            score++;
+            scoreText.text = score.ToString();
         }
     }
     IEnumerator GameOver()

@@ -6,6 +6,7 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
     public bool isStarted;
+
     private void Start()
     {
         Instance = this;
@@ -17,5 +18,6 @@ public class GameManager : MonoBehaviour
         {
             isStarted = true;
         }
+
     }
 }
