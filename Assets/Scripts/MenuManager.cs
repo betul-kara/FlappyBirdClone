@@ -7,7 +7,9 @@ public class MenuManager : MonoBehaviour
 {
     public void Restart()
     {
+        PlayerController.isGameOver = false;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+
     }
     public void BackToMainMenu()
     {
@@ -15,6 +17,7 @@ public class MenuManager : MonoBehaviour
     }
     public void StartGame()
     {
+        PlayerController.isGameOver = false;
         SceneManager.LoadScene(1);
     }
 }

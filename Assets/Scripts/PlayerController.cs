@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using Unity.VisualScripting;
@@ -14,7 +14,17 @@ public class PlayerController : MonoBehaviour
     public static bool isScoreTriggered;
 
     [SerializeField] TextMeshProUGUI scoreText;
+    [SerializeField] TextMeshProUGUI scoreAreaText;
+    [SerializeField] TextMeshProUGUI highscoreText;
+    [SerializeField] TextMeshProUGUI newText;
     int score = 0;
+    int currentScore = 0;
+    int highscore = 0;
+
+
+    [SerializeField] GameObject gameOver;
+    [SerializeField] AudioSource jumpSound;
+
 
     private void Start()
     {
@@ -22,11 +32,16 @@ public class PlayerController : MonoBehaviour
         rigidbody2d.bodyType = RigidbodyType2D.Kinematic;
         rigidbody2d.gravityScale = gravity;
         spriteRenderer = GetComponent<SpriteRenderer>();
+        jumpSound = GetComponent<AudioSource>();
+        highscore = PlayerPrefs.GetInt("Highscore", 0);
+        UpdateScoreText();
+
     }
     private void Update()
     {
         if (Input.GetMouseButtonDown(0) && !isGameOver)
         {
+            jumpSound.Play();
             rigidbody2d.bodyType = RigidbodyType2D.Dynamic;
 
             rigidbody2d.velocity = Vector3.up * speed;
@@ -61,5 +76,31 @@ public class PlayerController : MonoBehaviour
         rigidbody2d.velocity = speed * Vector3.down;
         yield return new WaitForSeconds(1);
         gameObject.SetActive(false);
+        gameOver.SetActive(true);
+        scoreText.gameObject.SetActive(false);
+        UpdateScore(score);
+    }
+    public void UpdateScore(int score)
+    {
+        // Skoru güncelle
+        currentScore += score;
+        scoreAreaText.text = "Score : " + score.ToString();
+
+        // Eğer şu anki skor, kaydedilmiş yüksek skordan büyükse, yüksek skoru güncelle
+        if (currentScore > highscore)
+        {
+            highscore = currentScore;
+
+            // Yüksek skoru PlayerPrefs'e kaydet
+            PlayerPrefs.SetInt("Highscore", highscore);
+            PlayerPrefs.Save(); // PlayerPrefs verilerini diskte hemen kaydet
+            newText.gameObject.SetActive(true);
+
+            UpdateScoreText(); // UI'da yüksek skoru güncelle
+        }
+    }
+    private void UpdateScoreText()
+    {
+        highscoreText.text = "Highscore : " + highscore.ToString();
     }
 }

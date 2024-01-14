@@ -6,7 +6,7 @@ public class SpawnManager : MonoBehaviour
 {
     [SerializeField] GameObject tilesMove;
     [SerializeField] GameObject tilePrefab;
-    [SerializeField] float spawnRate = 2f; 
+    [SerializeField] float spawnRate; 
     float nextSpawnTime = 0f;
 
     void Update()
