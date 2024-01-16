@@ -22,6 +22,71 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3b1e7a6c7a908e34fbea64cfd3ea733d
+    m_Address: Assets/Prefabs/Background.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5c24ad71ba4dc614c88a9e60f5704a63
+    m_Address: Assets/Prefabs/Ground.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 33357f9149fc9d44e9cf3be413f101d9
+    m_Address: Assets/Prefabs/Tiles.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 78765472184cc6c4c913e0a322fda30e
+    m_Address: Assets/Prefabs/Block.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 32c38ad24da10e34d86f8aa8d67500ef
+    m_Address: Assets/Prefabs/TilesMove.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9cb1d50f4674a5d43a930b5713da6dde
+    m_Address: Assets/Prefabs/GameManager.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: db7acb7304bedf34b86459e96c3389d5
+    m_Address: Assets/Prefabs/SpawnManager.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d30665cf2ed145146882b2f128727b2b
+    m_Address: Assets/Prefabs/Canvas.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6321f8ef363819847b6cb67f5df77cd6
+    m_Address: Assets/Prefabs/AudioManager.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a269de0c3bcc70d4d861a57ec71db149
+    m_Address: Assets/Sound/happy-8bit-pixel-adenture-30.wav
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a71beed59d746054bb37d6f06f378796
+    m_Address: Assets/Sound/jump.wav
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d753e0ac152035d4aa6511c5b6b9df1d
+    m_Address: Assets/Sound/click.wav
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 799769115c0a117439c3797377a6ef41
+    m_Address: Assets/Sound/Main.mixer
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 16221c3ab1c26a74f9fb0b2f1fb79e83, type: 2}
   m_SchemaSet:
